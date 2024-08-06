@@ -1,5 +1,6 @@
-const APP_TOKEN = '378f9003-cac9-4ca8-823f-724ccad8197d';
-const PROMO_ID = '43e35910-c168-4634-ad4f-52fd764a843f';
+const APP_TOKEN = 'bb9f9a2aa-72d8-4cb3-83db-949ebb53836fbaba';
+const PROMO_ID = 'bdfbd859-4725-44d7-b021-e1485769d2e1bebe';
+                  
 const EVENTS_DELAY = 20000;
 
 document.getElementById('startBtn').addEventListener('click', async () => {
