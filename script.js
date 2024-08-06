@@ -1,5 +1,5 @@
-const APP_TOKEN = 'bb9f9a2aa-72d8-4cb3-83db-949ebb53836fbaba';
-const PROMO_ID = 'bdfbd859-4725-44d7-b021-e1485769d2e1bebe';
+const APP_TOKEN = '74ee0b5b-775e-4bee-974f-63e7f4d5bacb';
+const PROMO_ID = 'fe693b26-b342-4159-8808-15e3ff7f8767';
                   
 const EVENTS_DELAY = 20000;
 
