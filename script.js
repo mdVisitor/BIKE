@@ -77,7 +77,7 @@ function generateClientId() {
 }
 
 async function login(clientId) {
-    const response = await fetch('https://api.gamepromo.io/promo/login-client', {
+    const response = await fetch('https://api-stage-ninja.gamepromo.io/promo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ appToken: APP_TOKEN, clientId, clientOrigin: 'deviceid' })
@@ -90,7 +90,7 @@ async function login(clientId) {
 }
 
 async function emulateProgress(clientToken) {
-    const response = await fetch('https://api.gamepromo.io/promo/register-event', {
+    const response = await fetch('https://api-stage-ninja.gamepromo.io/promo', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
