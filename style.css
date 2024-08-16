@@ -1,91 +1,420 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
+	background: linear-gradient(to top, #465484, #060a19);
+    //background-image: url("https://i.imgur.com/HzSxb8E.jpeg");//
+}
+
+
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    /*margin: 0 100px;*/
+    /*width: 100%;*/
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#game-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 600px;
-}
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+	}
 
-header, footer {
+
+.block-child {
+    opacity: 1;
     width: 100%;
-}
-
-header p {
-    font-size: 14px;
-    margin: 0;
-}
-
-footer {
-    margin-top: 20px;
-}
-
-footer button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-footer button:hover {
-    background-color: #0056b3;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#progressContainer {
-    margin-top: 20px;
-    position: relative;
-    width: 100%;
-    height: 30px;
-    background-color: #e0e0e0;
-    border-radius: 15px;
-}
-
-#progressBar {
     height: 100%;
-    width: 0%;
-    background-color: #76c7c0;
-    border-radius: 15px;
-    transition: width 0.3s;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
 }
 
-#progressText {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    line-height: 30px;
+#caption-hamster img {
+    width: 300px;
+    height: 70px;
+}
+
+
+
+.footer {
+        margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-social {
+    display: flex;
+}
+
+#footer-social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+#footer-social a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.footer2 {
+    display: flex;
+        margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+	flex-direction: column;
+    justify-content: center;
+}
+
+#footer-social2 {
+    display: flex;
+}
+
+#footer-social2 img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+#footer-social2 a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.button {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 3rem;
+    padding: 0 1.6rem;
     text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding: 0 2.6rem;
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#timerButton {
+    width: 170px;
+}
+
+#refreshButton {
+    display: flex;
+    align-items: center;
+}
+
+#refreshButton img {
+    width: 24px;
+    height: 24px;
+}
+
+#update-puzzle-time {
+    display: inline-block;
+    background-color: #D93334;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#update-puzzle {
+    display: none;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #fff;
+    color: #0e0e10;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Position above the tooltip */
+    left: 50%;
+    margin-left: -250px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-symbol {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.important {
+    color: #D93334;
     font-weight: bold;
 }
 
-.hidden {
+.hamster-theme .green {
+    border: 0.8px solid #0a0;
+}
+
+.hamster-theme .green .block-child {
+    position: relative;
+    border-radius: unset;
+    background-color: #39ff14;
+    border: 1px solid #0a0;
+}
+
+.hamster-theme .green .block-child::before, .hamster-theme .green .block-child::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 10px;
+    background-color: #39ff14;
+    transform: translateY(-50%);
+}
+
+.hamster-theme .block-child::before {
+    left: -14px;
+    border-radius: 1px 0 0 1px;
+    border: 1px solid #0a0;
+    border-right: 0;
+}
+
+.hamster-theme .block-child::after {
+    right: -14px;
+    border-radius: 0 1px 1px 0;
+    border: 1px solid #0a0;
+    border-left: 0;
+}
+
+.hamster-theme .block.horizontal {
+    padding: 12px 16px;
+}
+
+.hamster-theme .red {
+    border: 0.8px solid #a00;
+}
+
+.hamster-theme .red .block-child {
+    position: relative;
+    border-radius: unset;
+    background-color: #EB3729;
+    border: 1px solid #a00;
+}
+
+.hamster-theme .red .block-child::before, .hamster-theme .red .block-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 14px;
+    background-color: #EB3729;
+    transform: translateX(-50%);
+}
+
+.hamster-theme .red .block-child::before {
+    top: -14px;
+    border-radius: 1px 1px 0 0;
+    border: 1px solid #a00;
+    border-bottom: 0;
+}
+
+.hamster-theme .red .block-child::after {
+    bottom: -14px;
+    border-radius: 0 0 1px 1px;
+    border: 1px solid #a00;
+    border-top: 0;
+}
+
+.hamster-theme .block.vertical {
+    padding: 16px 12px;
+}
+
+
+.hamster-theme .key .block-child {
+    background-image: url("hamster-key.png");
+    background-size: cover;
+    border-radius: 1px;
+    border: 1px solid #989B5D;
+}
+
+.hamster-theme .key {
+    padding: 0;
+}
+
+.key-generator {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.key-generator-link {
+    color: #f1c40f;
+    margin-left: 15px;
+}
+.game-names-label {
+    margin-right: 10px;
+}
+
+#process-generate {
+    width: 100%;
+    margin-top: 10px;
     display: none;
 }
 
-#keyContainer {
-    margin-top: 20px;
+#process-generate-block {
+    margin-top: 15px;
+    display: none;
 }
+
+#generateButton {
+    margin-top: 15px;
+}
+
+#keys-block {
+    margin-top: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.key-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+	flex-direction: column;
+
+}
+
+.key-label {
+    margin-right: 10px;
+}
+
+.key-value {
+    color: #f1c40f;
+}
+
+.generate-time-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#generate-time-value {
+    display: inline-block;
+    background-color: #D93334;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.homa{
+
+            background-image: url("https://i.imgur.com/tMtwPDz.png");
+
+            background-size: no-repeat;
+
+            background-position: center;
+
+            background-size: cover;
+
+            height: 300px;
+
+            width: 300px;
+
+}
+
+          
